@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @collection.title %>
+</p>
+
+<p>
+  <strong>Shopify:</strong>
+  <%= @collection.shopify_id %>
+</p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @collection.site %>
+</p>
+
+<%= link_to 'Edit', edit_site_collection_path(@collection.site, @collection) %> |
+<%= link_to 'Back', site_collections_path(@collection.site) %>

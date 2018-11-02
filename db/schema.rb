@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181102003133) do
+ActiveRecord::Schema.define(version: 20181102010103) do
+
+  create_table "collections", force: :cascade do |t|
+    t.string   "title"
+    t.string   "shopify_id"
+    t.integer  "site_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "collections", ["site_id"], name: "index_collections_on_site_id"
 
   create_table "sites", force: :cascade do |t|
     t.string   "title"

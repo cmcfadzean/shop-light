@@ -15,7 +15,7 @@ class SitesController < ApplicationController
 
   # GET /sites/new
   def new
-    @site = current.user.sites.new(site_params)
+    @site = Site.new
   end
 
   # GET /sites/1/edit
@@ -25,7 +25,7 @@ class SitesController < ApplicationController
   # POST /sites
   # POST /sites.json
   def create
-    @site = Site.new(site_params)
+    @site = current_user.sites.new(site_params)
 
     respond_to do |format|
       if @site.save

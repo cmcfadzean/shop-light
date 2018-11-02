@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Collections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Shopify</th>
+      <th>Site</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @collections.each do |collection| %>
+      <tr>
+        <td><%= collection.title %></td>
+        <td><%= collection.shopify_id %></td>
+        <td><%= collection.site %></td>
+        <td><%= link_to 'Show', [collection.site, collection] %></td>
+        <td><%= link_to 'Edit', edit_site_collection_path(collection.site, collection)%></td>
+        <td><%= link_to 'Destroy', [collection.site, collection], :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Collection', new_site_collection_path %>

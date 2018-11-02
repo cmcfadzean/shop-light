@@ -14,7 +14,7 @@ class SitesController < ApplicationController
 
   # GET /sites/new
   def new
-    @site = Site.new
+    @site = current.user.sites.new(site_params)
   end
 
   # GET /sites/1/edit

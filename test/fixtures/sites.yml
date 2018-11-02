@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  url: MyString
+  shopify_url: MyString
+  shopify_key: MyString
+  logo: MyString
+  primary_color: MyString
+
+two:
+  title: MyString
+  url: MyString
+  shopify_url: MyString
+  shopify_key: MyString
+  logo: MyString
+  primary_color: MyString

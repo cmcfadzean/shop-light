@@ -1,5 +1,9 @@
-<h1>New Site</h1>
+<div class="main-content col flex-fill">
 
-<%= render 'form' %>
-
-<%= link_to 'Back', sites_path %>
+</div>
+<div class="main-sidebar col flex-fill">
+  <%= render 'form' %>
+  <%= link_to sites_path, class: "action" do %>
+    <i class="fa fa-arrow-left"></i>
+  <% end %>
+</div>

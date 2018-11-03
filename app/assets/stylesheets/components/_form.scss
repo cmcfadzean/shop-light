@@ -1,0 +1,32 @@
+.form {
+  &-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: $text-dark;
+  }
+  &-control {
+    border-radius: $border-radius;
+    border: 1px solid #dee2e6;
+    height: 50px;
+  }
+  &-action {
+    input {
+      @include simple-ease(all);
+      outline: none;
+      display: block;
+      width: 100%;
+      border: none;
+      background: $color-primary;
+      color: #fff;
+      padding: 15px 20px;
+      height: auto;
+      border-radius: $border-radius;
+      margin-top: 30px;
+      font-weight: 600;
+      &:hover {
+        cursor: pointer;
+        background: darken($color-primary, 5%);
+      }
+    }
+  }
+}

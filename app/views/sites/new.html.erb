@@ -2,7 +2,10 @@
 
 </div>
 <div class="main-sidebar col flex-fill">
-  <%= render 'form' %>
+  <div class="main-sidebar-scroller">
+    <%= render "shared/branding"%>
+    <%= render 'form' %>
+  </div>
   <%= link_to sites_path, class: "action" do %>
     <i class="fa fa-arrow-left"></i>
   <% end %>

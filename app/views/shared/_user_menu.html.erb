@@ -1,0 +1,10 @@
+<span class="dropdown user-menu">
+  <a class="user-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span><%= current_user.email %></span>
+    <i class="fa fa-user"></i>
+  </a>
+  <div class="dropdown-menu user-menu-dropdown">
+    <%= link_to "Account", edit_user_registration_path %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  </div>
+</span>

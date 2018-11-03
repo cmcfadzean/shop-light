@@ -7,12 +7,13 @@ body {
   text-size-adjust: 100%;
   font-family: $font-family;
   color: $text-default;
+  font-size: 14px;
 }
 a {
   @include simple-ease(all);
-  color: $text-dark;
+  color: $color-primary;
   &:hover {
     text-decoration: none;
-    color: #fff;
+    color: $color-primary-light;
   }
 }

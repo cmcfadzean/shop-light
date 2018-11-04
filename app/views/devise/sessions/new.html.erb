@@ -1,10 +1,10 @@
 <div class="auth-sidebar col flex-fill">
   <div class="auth-sidebar-inner row">
-    <div class="auth-sidebar-form col">
+    <div class="auth-sidebar-form col d-flex flex-column justify-content-center">
       <div class="auth-sidebar-logo">
         <%= image_tag("logo.png")%>
       </div>
-      <h2 class="auth-sidebar-title">Sign In To ShopLight</h2>
+      <h2 class="auth-sidebar-title">Welcome Back!</h2>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-group">

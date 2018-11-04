@@ -1,26 +1,40 @@
-<h2>Log in</h2>
+<div class="auth-sidebar col flex-fill">
+  <div class="auth-sidebar-inner row">
+    <div class="auth-sidebar-form col">
+      <div class="auth-sidebar-logo">
+        <%= image_tag("logo.png")%>
+      </div>
+      <h2 class="auth-sidebar-title">Sign In To ShopLight</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-group">
+          <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+        <div class="form-group">
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+        </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+        <% if devise_mapping.rememberable? -%>
+          <div class="form-group form-check">
+            <%= f.check_box :remember_me, class: "form-check-input" %>
+            <%= f.label :remember_me, class: "form-check-label" %>
+          </div>
+        <% end -%>
+
+        <div class="form-action">
+          <%= f.submit "Sign In" %>
+        </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="auth-sidebar-action col d-flex flex-column justify-content-center">
+      <h2>New To ShopLight?</h2>
+      <p>Start for free today and begin selling within the hour!</p>
+      <%= link_to "Sign up", new_registration_path(resource_name) %>
+    </div>
   </div>
-<% end %>
+</div>
+<div class="auth-content col flex-fill" style="background-image: url(<%= image_url "sign_in.jpg" %>);">
 
-<%= render "devise/shared/links" %>
+</div>

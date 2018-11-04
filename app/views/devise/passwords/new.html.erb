@@ -1,16 +1,28 @@
-<h2>Forgot your password?</h2>
+<div class="auth-sidebar col flex-fill">
+  <div class="auth-sidebar-inner row">
+    <div class="auth-sidebar-form col">
+      <div class="auth-sidebar-logo">
+        <%= image_tag("logo.png")%>
+      </div>
+      <h2 class="auth-sidebar-title">Forgot your password?</h2>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+        <div class="form-group">
+          <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+        </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+        <div class="form-action">
+          <%= f.submit "Send me reset password instructions" %>
+        </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </div>
+    <div class="auth-sidebar-action col d-flex flex-column justify-content-center">
+      <h2>New To ShopLight?</h2>
+      <p>Start for free today and begin selling within the hour!</p>
+      <%= link_to "Sign up", new_registration_path(resource_name) %>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+<div class="auth-content col flex-fill" style="background-image: url(<%= image_url "sign_in.jpg" %>);"></div>

@@ -1,16 +1,29 @@
-<h2>Resend unlock instructions</h2>
+<div class="auth-sidebar col flex-fill">
+  <div class="auth-sidebar-inner row">
+    <div class="auth-sidebar-form col d-flex flex-column justify-content-center">
+      <div class="auth-sidebar-logo">
+        <%= image_tag("logo.png")%>
+      </div>
+      <h2 class="auth-sidebar-title">Resend unlock instructions</h2>
+      <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+        <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+        <div class="actions">
+          <%= f.submit "Resend unlock instructions" %>
+        </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </div>
+    <div class="auth-sidebar-action col d-flex flex-column justify-content-center">
+      <h2>Have an account?</h2>
+      <p>Sign in to your existing shoplight account here.</p>
+      <%= link_to "Sign in", new_session_path(resource_name) %>
+    </div>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Resend unlock instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
+<div class="auth-content col flex-fill" style="background-image: url(<%= image_url "sign_in.jpg" %>);"></div>

@@ -1,0 +1,13 @@
+.navbar {
+  padding: 50px 0;
+  &-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: $text-dark;
+  }
+  &-link {
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}

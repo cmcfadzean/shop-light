@@ -1,4 +1,4 @@
-<div id='collection-component-4f3f969d84f'></div>
+<div id='collection-component-<%= collection.shopify_id %>'></div>
     <script data-shopify-buy-ui="">
     window.open = function (open) {
     return function (url, name, features) {
@@ -44,7 +44,7 @@
         ShopifyBuy.UI.onReady(client).then(function (ui) {
           ui.createComponent('collection', {
             id: <%= collection.shopify_id %>,
-            node: document.getElementById('collection-component-4f3f969d84f'),
+            node: document.getElementById('collection-component-<%= collection.shopify_id %>'),
             moneyFormat: '%24%7B%7Bamount%7D%7D',
             options: {
               "product": {

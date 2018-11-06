@@ -26,4 +26,11 @@
     left: -27px;
     bottom: 28px;
   }
+  &-add {
+    background: $color-add;
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
 }

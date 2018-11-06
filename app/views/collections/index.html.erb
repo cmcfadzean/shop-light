@@ -7,7 +7,7 @@
     <% @collections.each do |collection| %>
       <div class="listing" style="border-color: <%= collection.site.primary_color %>">
         <div class="listing-actions">
-          <%= link_to [collection.site, collection], class: "listing-action", target: "_blank" do %>
+          <%= link_to collection.site, class: "listing-action", target: "_blank" do %>
             <i class="fa fa-external-link"></i>
           <% end %>
           <%= link_to edit_site_collection_path(collection.site, collection), class: "listing-action" do %>

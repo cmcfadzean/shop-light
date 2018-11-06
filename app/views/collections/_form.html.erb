@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title, class: "form-label" %><br>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :shopify_id %><br>
-    <%= f.text_field :shopify_id %>
+  <div class="form-group">
+    <%= f.label :shopify_id, class: "form-label" %><br>
+    <%= f.text_field :shopify_id, class: "form-control" %>
   </div>
-  <div class="actions">
+  <div class="form-action">
     <%= f.submit %>
   </div>
 <% end %>

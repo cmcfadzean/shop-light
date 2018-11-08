@@ -6,7 +6,7 @@ class SitesController < ApplicationController
   # GET /sites
   # GET /sites.json
   def index
-    @sites = Site.where(:user_id => current_user.id)
+    @sites = current_user.sites
   end
 
   # GET /sites/1
@@ -21,6 +21,7 @@ class SitesController < ApplicationController
 
   # GET /sites/1/edit
   def edit
+    @site = Site.find_by!(id: params[:id], user_id: current_user.id)
   end
 
   # POST /sites

@@ -5,33 +5,34 @@ class CollectionsController < ApplicationController
   # GET /collections
   # GET /collections.json
   def index
-    site = Site.find(params[:site_id])
+    #site = Site.find(params[:site_id])
+    site = Site.find_by!(id: params[:site_id], user_id: current_user.id)
     @collections = site.collections
   end
 
   # GET /collections/1
   # GET /collections/1.json
   def show
-    site = Site.find(params[:site_id])
+    site = Site.find_by!(id: params[:site_id], user_id: current_user.id)
     @collection = site.collections.find(params[:id])
   end
 
   # GET /collections/new
   def new
-    site = Site.find(params[:site_id])
+    site = Site.find_by!(id: params[:site_id], user_id: current_user.id)
     @collection = site.collections.build
   end
 
   # GET /collections/1/edit
   def edit
-    site = Site.find(params[:site_id])
+    site = Site.find_by!(id: params[:site_id], user_id: current_user.id)
     @collection = site.collections.find(params[:id])
   end
 
   # POST /collections
   # POST /collections.json
   def create
-    site = Site.find(params[:site_id])
+    site = Site.find_by!(id: params[:site_id], user_id: current_user.id)
     @collection = site.collections.create(collection_params)
 
     respond_to do |format|

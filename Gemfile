@@ -33,6 +33,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'jquery-minicolors-rails'
 gem 'jquery-turbolinks'
+gem 'rails_12factor', group: :production  
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

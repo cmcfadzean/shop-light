@@ -1,0 +1,9 @@
+.collection {
+  text-align: center;
+  padding-top: 80px;
+  &-title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: $text-dark;
+  }
+}

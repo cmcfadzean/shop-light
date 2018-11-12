@@ -1,13 +1,13 @@
 .form {
-  &-label {
-    font-weight: 600;
-    font-size: 13px;
-    color: $text-dark;
-  }
   &-control {
     border-radius: $border-radius;
     border: 1px solid #dee2e6;
     height: 50px;
+    &-label {
+      font-weight: 600;
+      font-size: 13px;
+      color: $text-dark;
+    }
   }
   &-action {
     input {

@@ -1,3 +1,7 @@
+/*
+ *= require jquery.minicolors
+ */
+
 @import "base/breakpoints";
 @import "base/mixins";
 @import "base/helpers";
@@ -9,10 +13,12 @@
 @import "components/form";
 @import "components/listing";
 @import "components/message";
+@import "components/minicolors";
 
 @import "modules/auth_content";
 @import "modules/auth_sidebar";
 @import "modules/branding";
+@import "modules/collection";
 @import "modules/main_content";
 @import "modules/main_sidebar";
 @import "modules/navbar";

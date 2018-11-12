@@ -1,6 +1,6 @@
 <style>
-  .navbar-link {
-    color: <%= @site.primary_color %>;
+  .navbar {
+    background: <%= @site.primary_color %>;
   }
 </style>
 
@@ -17,15 +17,15 @@
     </div>
     <div class="col-sm-10 text-right">
       <% @site.collections.each do |collection| %>
-        <a class="navbar-link" data-toggle="tab" href="#<%= collection.id %>" role="tab" aria-controls="<%= collection.id %>" aria-selected="true"><%= collection.title %></a>
+        <a class="navbar-link" href="#collection-<%= collection.id %>"><%= collection.title %></a>
       <% end %>
     </div>
   </div>
 </div>
-<div class="collection">
+<div class="collections">
   <div class="container">
     <% @site.collections.each do |collection| %>
-      <div class="tab-pane fade show active" id="<%= collection.id %>" role="tabpanel" aria-labelledby="<%= collection.id %>-tab">
+      <div class="collection" id="collection-<%= collection.id %>">
         <%= render 'buy_button', site: @site, collection: collection %>
       </div>
     <% end %>

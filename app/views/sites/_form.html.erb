@@ -15,8 +15,9 @@
   <%= f.input :url %>
   <%= f.input :shopify_url %>
   <%= f.input :shopify_key %>
-  <%= f.input :logo %>
-  <%= f.input :primary_color %>
+  <!--<%= f.input :logo %>-->
+  <%= f.input :primary_color, as: :minicolors, input_html: {data: {
+          minicolors: {theme: :bootstrap, position: :right}}} %>
   <div class="form-action">
     <%= f.button :submit %>
   </div>

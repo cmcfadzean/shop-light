@@ -1,6 +1,6 @@
 <style>
-  .navbar-link {
-    color: <%= @site.primary_color %>;
+  .navbar {
+    background: <%= @site.primary_color %>;
   }
 </style>
 
@@ -22,10 +22,10 @@
     </div>
   </div>
 </div>
-<div class="collection">
+<div class="collections">
   <div class="container">
     <% @site.collections.each do |collection| %>
-      <div id="collection-<%= collection.id %>">
+      <div class="collection" id="collection-<%= collection.id %>">
         <%= render 'buy_button', site: @site, collection: collection %>
       </div>
     <% end %>

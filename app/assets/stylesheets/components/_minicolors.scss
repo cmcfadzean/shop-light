@@ -1,0 +1,10 @@
+.minicolors-theme-bootstrap {
+  .minicolors {
+    &-swatch {
+      border: none;
+      height: 44px;
+      width: 10px;
+      border-radius: $border-radius;
+    }
+  }
+}

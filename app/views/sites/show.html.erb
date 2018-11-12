@@ -23,11 +23,11 @@
   </div>
 </div>
 <div class="collections">
-  <div class="container">
-    <% @site.collections.each do |collection| %>
-      <div class="collection" id="collection-<%= collection.id %>">
+  <% @site.collections.each do |collection| %>
+    <div class="collection" id="collection-<%= collection.id %>">
+      <div class="container">
         <%= render 'buy_button', site: @site, collection: collection %>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

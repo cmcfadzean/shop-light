@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
+gem 'puma', '~> 3.12.0'
 gem 'simple_form'
 gem 'jquery-minicolors-rails'
 gem 'jquery-turbolinks'
